@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.brands-list li {
+    display: inline;
+    margin-right: 8px;
+}
+
+.brands-list img, .social-links img {
+    height: 24px;
+}
+
+.container {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.store-front {
+    height: 400px;
+    margin-right: 24px;
+}
+
+body {        
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    padding: 16px 0;
+    background-color: #31304D;
+    color: #F0ECE5;
+}
+
+header .container,
+section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header,
+section h2 {
+    font-family: 'Bungee', sans-serif;
+}
+
+header h1,
+section h2 {
+    font-weight: normal;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 16px;
+    font-size: 18px;
+}
+
+header nav li a {
+    color: #F0ECE5;
+    text-decoration: none;
+}
+
+section {
+    padding: 24px 0;
+}
+
+section .container {
+    align-items: flex-start;
+}
+
+section {
+    color: #31304D;
+}
+
+section h2 {
+    margin-bottom: 16px;
+}
+
+section p {
+    margin-bottom: 8px;
+}
