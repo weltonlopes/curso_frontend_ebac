@@ -1,0 +1,88 @@
+/* my colors: 
+    0C356A, 0174BE, FFC436, FFF0CE
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 16px 0;
+    background-color: #0C356A;
+    color: #FFC436;
+}
+
+header .container,
+section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 16px;
+    font-size: 18px;
+}
+
+header nav li a {
+    color: #FFC436;
+    text-decoration: none;
+}
+
+input:focus, textarea:focus {
+    outline-color: #0174BE;
+}
+
+section {
+    padding: 24px 0;
+    display: flex;
+}
+
+section h2,
+section h3 {
+    margin-bottom: 16px;
+}
+
+section p {
+    margin-bottom: 8px;
+}
+
+.container {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+img {
+    height: 400px;
+}
+
+form input,
+form textarea,
+form button {
+    display: block;
+    width: 320px;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+form button {
+    background-color: #0C356A;
+    color: #FFC436;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0174BE;
+}
+
+form textarea {
+    font-family: 'Roboto' , sans-serif;
+    resize: none;
+    height: 80px;
+}
