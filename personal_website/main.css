@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+body {        
+    font-family: 'Ubuntu', sans-serif;
+}
+
 header {
     padding: 16px 0;
     background-color: #0C356A;
@@ -33,17 +37,31 @@ header nav li a {
     text-decoration: none;
 }
 
+header,
+header h1,
+section h2,
+section h3,
+form button {
+    font-family: 'Bungee', sans-serif;
+}
+
 input:focus, textarea:focus {
     outline-color: #0174BE;
 }
 
 section {
-    padding: 24px 0;
+    padding: 16px 8px;
     display: flex;
+    color: #0C356A;
+}
+
+section .container {
+    display: block;
 }
 
 section h2,
-section h3 {
+section h3,
+.articles article {
     margin-bottom: 16px;
 }
 
@@ -51,10 +69,46 @@ section p {
     margin-bottom: 8px;
 }
 
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.articles img {
+    width: 100%;
+}
+
+.articles article {
+    width: 30%;
+}
+
 .container {
     max-width: 1080px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-links img {
+    height: 32px;
+}
+
+.social-links li {
+    display: inline;
+    margin-right: 8px;
+}
+
+.social-links li a {
+    text-decoration: none;
+}
+
+#contact .container {
+    display: block;
 }
 
 img {
@@ -82,7 +136,13 @@ form button:hover {
 }
 
 form textarea {
-    font-family: 'Roboto' , sans-serif;
+    font-family: 'Ubuntu' , sans-serif;
     resize: none;
     height: 80px;
+}
+
+footer {
+    background-color:#0C356A;
+    color: #FFC436;
+    padding: 16px 0;
 }
