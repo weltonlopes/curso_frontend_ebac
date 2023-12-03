@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin-top: 10%;
+    padding: 40px;
+}
+
+.form-title {
+    display: flexbox;
+    padding: 0 100px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#error-message {
+    color: white;
+    background-color: red;
+    display: none;
+}
+
+
+form input,
+form button,
+form p {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 6px;
+}
+
+form button {
+    background-color: rgb(29, 115, 185);
+    border: solid rgb(29, 115, 185);
+    font-weight: bold;
+    font-size: 15px;
+    color: antiquewhite;
+    cursor: pointer;
+    outline: none;
+}
+
+form button:hover {
+    background-color: rgb(45, 99, 143);  
+    border: solid rgb(45, 99, 143);
+}
+
+form button:active {
+    transform: translateY(2px);
+}
