@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro cliente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">    
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <h1>Formulário de cadastro</h1>
+            <h2>Registro de novo cliente</h2>
+        </div>
+        <div class="right-side">
+            <h2>Dados do cliente</h2>
+            <form>
+                <label class="big" for="nome-completo">Nome Completo :</label>
+                <input class="big" type="text" required id="nome-completo" name="nomeCompleto" placeholder="Nome completo">
+                <label for="e-mail">E-mail :</label>
+                <input type="email" required id="e-mail" name="email" placeholder="email@exemplo.com">
+                <div class="double-input">
+                    <div>
+                        <label for="cpf">CPF :</label>
+                        <input type="text" required id="cpf" name="cpf" placeholder="Somente números">
+                    </div>
+                    <div>
+                        <label for="telefone">Telefone :</label>
+                        <input type="tel" required id="telefone" name="telefone" placeholder="Somente números">
+                    </div>
+                </div>
+                <label for="cep">CEP :</label>
+                <input type="text" required id="cep" name="cep" placeholder="Somente números">
+                <label for="endereco-completo">Endereço Completo :</label>
+                <input type="text" required id="endereco-completo" name="enderecoCompleto" placeholder="Endereço do Cliente">
+                <div class="buttons">
+                    <button type="submit">Cadastrar</button>
+                    <button type="reset">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/messages_pt_BR.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
