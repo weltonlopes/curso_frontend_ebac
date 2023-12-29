@@ -1,12 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Roboto, sans-serif;
-}
+@use './config/reset';
+@use './config/variaveis';
 
 body {
-    background-color: #f5f6fa;
+    background-color: variaveis.$corDeFundo;
 }
 
 li {
@@ -20,31 +16,33 @@ li {
 }
 
 header {
-    background-color: #182C61;
+    background-color: variaveis.$corPrincipal;
     position: sticky;
     top: 0;
     left: 0;
-}
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 0;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+    }
+
 }
 
 .menu {
     display: flex;
-}
+    
+    li {
+        font-weight: bold;
+        margin-left: 24px;
+        
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
 
-.menu li {
-    font-weight: bold;
-    margin-left: 24px;
-}
-
-.menu li a {
-    color: #fff;
-    text-decoration: none;
 }
 
 section {
@@ -60,27 +58,31 @@ section {
     width: 100%;
 }
 
-.product-item img {
+.product-item {
+    
+    img {
     width: 100%;
     border-radius: 16px;
+    }
+
 }
 
 .product-button {
     display: block;
-    background-color: #44bd32;
+    background-color: variaveis.$corSecundaria;
     color: #fff;
     text-align: center;
     padding: 8px 0;
     border-radius: 8px;
     margin-top: 8px;
     text-decoration: none;
+
+    &:hover {
+        background-color: lighten(variaveis.$corSecundaria, 5%);
+    }
 }
 
-.product-button:hover {
-    background-color: #4cd137;
-}
-
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: variaveis.$tablet) {
     .container {
         max-width: 80%;
     }
@@ -91,7 +93,7 @@ section {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: variaveis.$mobile) {
     .products {
         display: block;
     }
