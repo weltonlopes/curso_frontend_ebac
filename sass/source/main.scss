@@ -1,28 +1,84 @@
-$corPrincipal: #eee;
-$corSecundaria: #111;
+@use 'config/reset';
+@use 'config/variaveis';
+@use 'sass:math';
+
+@mixin elementoForm() {
+    padding: 8px;
+    display: block;
+    width: inherit;
+    margin-bottom: 16px;
+}
+
+@function pixelParaEm($alvoEmPixel, $contextoEmPixel: 16px) {
+    @return math.div($alvoEmPixel, $contextoEmPixel)+em;
+}
 
 body {
-    background-color: $corPrincipal;
+    background-color: #eee;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 header {
-    background-color: $corPrincipal;
+    padding: 16px 0;
+    background-color: variaveis.$corPrincipal;
+    color: #fff;
+    text-align: center;
+}
 
-    h1 {
-        color: $corSecundaria;
+.form-container {
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+
+    h2 {
+        font-size: pixelParaEm(48px);
+        text-align: center;
+    }
+
+    form {
+
+        width: 100%;
+        max-width: 60%;
+        margin-top: 40px;
+
+        label {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        input {
+            @include elementoForm();
+            background-color: transparent;
+            border: none;
+            border-bottom: 3px solid variaveis.$corSecundaria;
+        }
+
+        button {
+            @include elementoForm();
+            background-color: variaveis.$corSecundaria;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+
+            &:hover {
+                background-color: darken(variaveis.$corSecundaria, 10%);
+            }
+        }
     }
 }
 
-button {
-    padding: 16px;
-    background-color: $corSecundaria;
-    color: $corPrincipal;
-
-    &.sucesso {
-        background-color: green;
-    }
-
-    &:hover {
-        background-color: red;
+@media screen and (max-width: variaveis.$mobile) {
+    .container {
+        max-width: 80%;
     }
 }
