@@ -1,0 +1,110 @@
+@import 'mapas.less';
+
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(max-width: 1023px)";
+
+// Reset
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+// Seletores de tags
+body {
+    background-color: #colors[backgroundColor];
+}
+
+li {
+    list-style: none;
+}
+
+h4 {
+    margin: 16px 0;
+}
+
+header {
+    background-color: #colors[corPrincipal];
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0;
+    }
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+section {
+    padding: 56px 0;
+}
+
+// Seletores de classes
+.container {
+    max-width: 1024px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+
+    li {
+        font-weight: bold;
+        margin-left: 24px;
+
+        a {
+            text-decoration: none;
+            color: #colors[textColor];
+        }
+    }
+}
+
+.products {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+    width: 100%;
+
+    &-button {
+        display: block;
+        background-color: #colors[corSecundaria];
+        color: #colors[textColor];
+        text-align: center;
+        padding: 8px 0;
+        border-radius: 8px;
+        margin-top: 8px;
+        text-decoration: none;
+
+        &:hover{            
+            background-color: lighten(#colors[corSecundaria], 5%);
+        }
+    }
+
+    img {
+        width: 100%;
+        border-radius: 16px;
+    }
+
+    @media @breakpointTablet {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+
+    @media @breakpointMobile {
+        display: block;
+
+        &-item {
+            margin-bottom: 32px;
+        }
+    }
+}
