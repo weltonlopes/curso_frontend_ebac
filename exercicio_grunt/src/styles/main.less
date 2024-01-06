@@ -1,0 +1,70 @@
+@corDeFundo: #ff7979;
+@corPrincipal: #eb4d4b;
+@corDaMensagem: #f0932b;
+@corSecundaria: #686de0;
+@corTextoInterno: #130f40;
+@fontPrincipal: 'Lobster', sans-serif;
+
+
+.trueButton(@bgColor) {
+    cursor: pointer;
+    color: #fff;
+    background-color: @bgColor;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 50px 0;
+
+    &:hover {
+        background-color: darken(@bgColor, 10);
+    }
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: @fontPrincipal;
+}
+
+.container {
+    max-width: 1024px;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    font-size: 5em;
+
+    .bigButton {
+        height: 25%;
+        width: 22%;
+        border-radius: 50%;
+        box-shadow: 10px 5px 5px @corPrincipal;
+
+        .trueButton(@corDeFundo);
+    }
+
+    #mensagem {
+        color: @corDaMensagem;
+    }
+
+    .normalButton {
+        width: 70%;
+        margin-top: 20px;
+        padding: 10px 0;
+        border-radius: 5px;
+
+        .trueButton(@corSecundaria);
+    }
+
+    #resultado {
+        display: none;
+    }
+
+    #alerta {
+        display: none;
+    }
+
+}
+
